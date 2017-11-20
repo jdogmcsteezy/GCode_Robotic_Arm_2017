@@ -1,4 +1,4 @@
-
+/* JESSE SCHMIDT 5/25/17 */
 #include "circle.h"
 
 
@@ -57,7 +57,6 @@ double Circle::getAnglePt(PointXY point)
 		else 
 			return angle;
 	}
-
 }
 
 double Circle::getAngleSteps(double resolution, double radius)
@@ -69,10 +68,10 @@ double Circle::getAngleSteps(double resolution, double radius)
 PointXY Circle::getPoint(double angle, double radius)
 {
 	PointXY returnPt;
-	
+	// If default is given use instance data.
 	if (radius == 0)
 		radius = this->radius;
-
+	// Compute X,Y point and add center offset.
 	returnPt.ptX = (radius * cos(angle)) + center.ptX;
 	returnPt.ptY = (radius * sin(angle)) + center.ptY;
 
@@ -85,7 +84,7 @@ PointXY Circle::getPoint(double angle, double radius, PointXY center)
 
 	if (radius == 0)
 		radius = this->radius;
-
+	// Compute X,Y point and add center offset.
 	returnPt.ptX = (radius * cos(angle)) + center.ptX;
 	returnPt.ptY = (radius * sin(angle)) + center.ptY;
 

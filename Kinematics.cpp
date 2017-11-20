@@ -1,3 +1,4 @@
+/* JESSE SCHMIDT 5/25/17 */
 #include "Kinematics.h"
 
 Kinematics::Kinematics()
@@ -18,21 +19,20 @@ void Kinematics::setArms(const double armOne,const double armTwo)
 	this->armTwo = armTwo;
 }
 
-
-
 Angles Kinematics::getAngles(const PointXY point, const Units mode)
 {
 	Angles output;
-
+	// Compute first angle using law of cosines
 	output.angleOne = acos((pow(point.ptX, 2) + pow(point.ptY, 2) 
 		- pow(armOne, 2) - pow(armTwo, 2)) / (2 * armOne*armTwo));
-
+	// Compute second angle using law of sines
 	output.angleTwo = ((asin((armTwo * sin(output.angleOne)) 
 		/ sqrt(pow(point.ptX, 2) + pow(point.ptY, 2))))
 		+ atan(point.ptY / point.ptX));
 
 	if (mode == Deg)
 	{
+		// Convert to degrees.
 		output.angleOne = unitsTo(Deg, output.angleOne);
 		output.angleTwo = unitsTo(Deg, output.angleTwo);
 		return output;

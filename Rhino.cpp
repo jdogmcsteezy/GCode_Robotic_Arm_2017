@@ -1,3 +1,4 @@
+/* JESSE SCHMIDT 5/25/17 */
 #include "Rhino.h"
 
 Rhino::Rhino(char* comPort, const double armOne, const double armTwo)
