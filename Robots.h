@@ -1,4 +1,23 @@
-/* JESSE SCHMIDT 5/25/17 */
+//************************************************************************//
+// Copyright © 2017, Jesse Schmidt //
+// All rights reserved. //
+// //
+// Author: //
+// Jesse Schmidt //
+// //
+// Department: //
+// COMSC-11 C++ Programming Department //
+// //
+// Purpose: Contains some much needed structures //
+//			so i just put it in a file to easily include.//
+////
+// //
+// //
+// Revision History //
+// 05/19/2017 Jesse Schmidt //
+// - Original Version //
+// //
+//************************************************************************//
 #ifndef ROBOT_H
 #define ROBOT_H
 #define _USE_MATH_DEFINES
@@ -20,6 +39,7 @@ struct PointXY
 {
 	double ptX;
 	double ptY;
+	double ptZ;
 };
 
 template <class NumReturn>

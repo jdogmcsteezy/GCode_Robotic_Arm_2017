@@ -1,4 +1,5 @@
 
+
 /* ------------------------------------------------------------------------ --
 --                                                                          --
 --                        PC serial port connection object                  --
@@ -10,7 +11,7 @@
 -- ------------------------------------------------------------------------ */
 #ifndef TSERIAL_H
 #define TSERIAL_H
-#include <Windows.h>
+#include <windows.h>
 #define HANDLE void*
 using namespace std;
 
@@ -36,7 +37,7 @@ class Tserial
    friend void operator << (Tserial& stream, char *ptr);
    friend void operator >> (Tserial& stream, char &c);
    friend void operator >> (Tserial& stream, char *ptr);
-   int           connect          (char *port_arg, int rate_arg,
+   int           connect          (const char *port_arg, int rate_arg,
                                    serial_parity parity_arg);
    void          sendChar         (char c);
    void          sendArray        (char *buffer, int len);

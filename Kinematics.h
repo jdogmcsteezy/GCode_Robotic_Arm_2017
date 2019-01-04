@@ -1,16 +1,28 @@
-/* JESSE SCHMIDT 5/25/17 */
-#include<iostream>
-#include<cMath>
-#include"Robots.h"
+//************************************************************************//
+// Copyright © 2017, Jesse Schmidt //
+// All rights reserved. //
+// //
+// Author: //
+// Jesse Schmidt //
+// //
+// Department: //
+// COMSC-11 C++ Programming Department //
+// //
+// Purpose: Calculate angles of obleque triangles //
+//			with specified side lenghts			//
+// //
+// //
+// Revision History //
+// 05/19/2017 Jesse Schmidt //
+// - Original Version //
+// //
+//************************************************************************//
 #ifndef KINEMATICS_H
 #define KINEMATICS_H
-/* Kinematics Class
- * Class used for simple two arm kinematic equations.
- * It uses the length of two arms stores as private variable
- * to then calculate the needed angles between the first arm
- * relative to the x axis and the second arm relative to 
- * to the first. All using the law of sines and cosines.
- */
+#include<cMath>
+#include"Robots.h"
+#include "Robots.h"
+
 class Kinematics
 {
 
@@ -19,34 +31,15 @@ private:
 	double armTwo;
 
 public:
-	/* Constructor 
-	 * Sets arm lengths to 0.
-	 */
 	Kinematics();
-	/* Constructor OVERLOADED
-	 * Sets arm lengths to to paramter lengths.
-	 * @param const double - First arm length.
-	 * @param const double - Second arm lenth.
-	 */
+
 	Kinematics(const double armOne, const double armTwo);
-	/* setArms
-	 * Mutator for arm lengths.
-	 * @param const double - First arm length.
-	 * @param const double - Second arm lenth.
-	 */
+
 	void setArms(const double armOne, const double armTwo);
-	/* getAngles
-	 * Uses the point given relative to the origin to calculate
-	 * the two desired angles that the arms must be at in order
-	 * to get to the desired cartesian coordinate. The function 
-	 * used the laws of sines and cosines 
-	 * @param const PointXY - Desired end point of arms.
-	 * @param cont Units Enumeration - An enumeration that allows 
-	 *						the user to choose degrees or radians.
-	 * @return Angles - A struct containing both angles.
-	 */
+	
+
 	Angles getAngles(const PointXY point, const Units mode = Rad);
-	/* Destuctor */
+
 	~Kinematics(){}
 };
 

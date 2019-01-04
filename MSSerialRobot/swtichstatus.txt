@@ -1,2 +1,0 @@
-0 = open = swithch is set
-1 = closed = switch is not set

@@ -1,3 +1,5 @@
+
+
 /*--------------------------------------------------------------------------
 -- Plateform: Windows 95, 98, NT, 2000 (Win32), Win XP, Win 7/8           --
 ---------------------------------------------------------------------------- */
@@ -38,7 +40,7 @@ void Tserial::disconnect(void)
 /* -------------------------------------------------------------------- */
 /* --------------------------    connect      ------------------------- */
 /* -------------------------------------------------------------------- */
-int  Tserial::connect          (char *port_arg, int rate_arg, serial_parity parity_arg)
+int  Tserial::connect          (const char *port_arg, int rate_arg, serial_parity parity_arg)
 {
  int erreur;
  DCB  dcb;
