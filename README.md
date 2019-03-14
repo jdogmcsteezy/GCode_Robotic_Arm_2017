@@ -1,8 +1,5 @@
 # GCode_Robotic_Arm_2017
-This project was completed. However, do to a flash drive problem the complete project was lost. Here is what I have to show. I would re-complete the project but I do not have one of these robotic arms availible. If anyone wants proof of completion I can get a letter from my professor. 
-Parts not completed in this version:
-Robo1.cpp: This would have been the driver for the project.
-Rhino.cpp: This is the controlling class for the Rhino(the arm) and the moveInArc() function has not been finished in this version.
+This is one of my first C++ projects of this size.  I am not proud of how the code looks but I am proud of how it works. I have come along way since I completed this project.
 
 Here is two links to videos showing the projects tests. This project represents OO organization.
 https://youtu.be/YewxlUa9kjo
